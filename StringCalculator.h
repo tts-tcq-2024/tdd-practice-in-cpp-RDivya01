@@ -6,7 +6,7 @@
 
 class StringCalculator {
 public:
-    int Add(const std::string& numbers);
+    int add(const std::string& numbers);
 
 private:
     std::vector<int> ParseNumbers(const std::string& numbers, const std::string& delimiter);
