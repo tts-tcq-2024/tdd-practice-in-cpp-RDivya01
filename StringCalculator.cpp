@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include <algorithm>
 
-int StringCalculator::Add(const std::string& numbers) {
+int StringCalculator::add(const std::string& numbers) {
     if (numbers.empty()) {
         return 0;
     }
