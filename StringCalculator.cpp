@@ -8,8 +8,9 @@ int StringCalculator::add(const std::string& numbers) {
         return 0;
     }
 
-    std::string delimiter = extractDelimiter(numbers);
-    std::vector<int> parsedNumbers = parseNumbers(numbers, delimiter);
+    std::string numbersCopy = numbers;
+    std::string delimiter = extractDelimiter(numbersCopy);
+    std::vector<int> parsedNumbers = parseNumbers(numbersCopy, delimiter);
     
     int sum = 0;
     for (int num : parsedNumbers) {
