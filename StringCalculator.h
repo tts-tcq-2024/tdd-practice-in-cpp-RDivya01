@@ -15,6 +15,7 @@ private:
     void addNumber(const std::string& numStr, std::vector<int>& result, std::vector<int>& negatives);
     void handleNegatives(const std::vector<int>& negatives);
     std::string extractDelimiter(std::string& numbers);
+    int sumNumbers(const std::vector<int>& numbers);
 };
 
 #endif // STRING_CALCULATOR_H
