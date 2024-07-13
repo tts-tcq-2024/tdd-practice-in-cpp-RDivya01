@@ -12,13 +12,7 @@ int StringCalculator::add(const std::string& numbers) {
     std::string delimiter = extractDelimiter(numbersCopy);
     std::vector<int> parsedNumbers = parseNumbers(numbersCopy, delimiter);
     
-    int sum = 0;
-    for (int num : parsedNumbers) {
-        if (num <= 1000) {
-            sum += num;
-        }
-    }
-    return sum;
+    return sumNumbers(parsedNumbers);
 }
 
 std::vector<int> StringCalculator::parseNumbers(const std::string& numbers, const std::string& delimiter) {
@@ -79,4 +73,14 @@ std::string StringCalculator::extractDelimiter(std::string& numbers) {
         return delimiter;
     }
     return ",";
+}
+
+int StringCalculator::sumNumbers(const std::vector<int>& numbers) {
+    int sum = 0;
+    for (int num : numbers) {
+        if (num <= 1000) {
+            sum += num;
+        }
+    }
+    return sum;
 }
